@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Player Canal 1 - Full Zoom</title>
+  <title>Player Canal 1 - Ajustado</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     html, body {
@@ -15,18 +15,19 @@
     }
 
     .iframe-wrapper {
-      width: 120vw; /* aumenta largura para "zoom" */
-      height: 120vh; /* aumenta altura */
-      transform: scale(1.2); /* zoom efetivo */
-      transform-origin: center center; /* centraliza o zoom */
       position: absolute;
-      top: -10vh; /* reposiciona para centralizar */
-      left: -10vw;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     iframe {
-      width: 100%;
-      height: 100%;
+      width: 110vw;   /* zoom horizontal leve */
+      height: 110vh;  /* zoom vertical leve */
       border: none;
     }
   </style>
