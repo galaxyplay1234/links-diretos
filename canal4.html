@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
- <head> 
-  <meta charset="UTF-8"> 
-  <title>Player Canal 4</title> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<head>
+  <meta charset="UTF-8">
+  <title>Player Canal 1 - Full Zoom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     html, body {
       margin: 0;
@@ -13,14 +14,30 @@
       overflow: hidden;
     }
 
-    iframe {
-      border: none;
-      width: 100vw;
-      height: 100vh;
+    .iframe-wrapper {
+      width: 120vw; /* aumenta largura para "zoom" */
+      height: 120vh; /* aumenta altura */
+      transform: scale(1.2); /* zoom efetivo */
+      transform-origin: center center; /* centraliza o zoom */
+      position: absolute;
+      top: -10vh; /* reposiciona para centralizar */
+      left: -10vw;
     }
-  </style> 
- </head> 
- <body> 
-  <iframe src="https://xn--94q1b205cfk2c.net/embed/canais.php?id=canal4&amp;autoplay=1&amp;mute=1" allow="autoplay" allowfullscreen> </iframe> 
- </body>
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="iframe-wrapper">
+    <iframe 
+      src="https://xn--94q1b205cfk2c.net/embed/canais.php?id=canal1&autoplay=1&mute=1" 
+      allow="autoplay; fullscreen" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</body>
 </html>
