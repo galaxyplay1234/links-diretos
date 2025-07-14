@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
- <head> 
-  <meta charset="UTF-8"> 
-  <title>Player Canal 1</title> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<head>
+  <meta charset="UTF-8">
+  <title>Canal 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     html, body {
       margin: 0;
@@ -13,15 +14,31 @@
       overflow: hidden;
     }
 
-    iframe {
-      border: none;
+    .iframe-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100vw;
       height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-  </style> 
- </head> 
- <body> 
-  <iframe src="https://xn--94q1b205cfk2c.net/embed/canais.php?id=canal1&amp;autoplay=1&amp;mute=1" allow="autoplay" allowfullscreen> </iframe> 
- </body>
-</html>
 
+    iframe {
+      width: 105vw;   /* zoom horizontal leve */
+      height: 105vh;  /* zoom vertical leve */
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="iframe-wrapper">
+    <iframe 
+      src="https://xn--94q1b205cfk2c.net/embed/canais.php?id=canal1&autoplay=1&mute=1" 
+      allow="autoplay; fullscreen" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</body>
+</html>
