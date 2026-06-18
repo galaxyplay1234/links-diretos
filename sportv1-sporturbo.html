@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Player Fullscreen (Seguro)</title>
+  <style>
+  html,body{margin:0;height:100%;overflow:hidden;background:#000}
+  #wrap{position:fixed;inset:0}
+  iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  /* Click-shield opcional: absorve o 1º clique (que muitos players usam p/ abrir ads) */
+  .shield{
+    position:absolute;inset:0;cursor:pointer;
+    background:transparent; /* invisível */
+  }
+</style>
+ </head>
+ <body>
+  <div id="wrap">
+   <iframe id="p" src="https://sporturbo.com/player/canais/ampv-sportv" referrerpolicy="no-referrer" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen sandbox="allow-scripts allow-same-origin allow-presentation">
+    </iframe> <!-- Remova este DIV se não quiser o '1º clique bloqueado' -->
+   <div class="shield" id="shield" title="Clique para ativar o player"></div>
+  </div>
+  <script>
+  // Remove o shield após 800 ms OU no primeiro clique (o que vier antes)
+  const shield = document.getElementById('shield');
+  if (shield){
+    const remove = ()=> shield.remove();
+    shield.addEventListener('click', remove, {once:true});
+    setTimeout(remove, 800);
+  }
+</script>
+ </body>
+</html>
